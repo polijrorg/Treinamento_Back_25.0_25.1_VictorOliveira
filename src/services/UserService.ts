@@ -54,7 +54,8 @@ class UserService {
     email: string,
     password: string,
     telephone: string,
-    cpf: string
+    cpf: string,
+    login: string
   ): User | string {
     if (this.userRepository.findIndexById(id) === -1) {
       return 'Usuário não encontrado';
@@ -72,28 +73,33 @@ class UserService {
       return 'CPF já cadastrado';
     }
 
+    if (login && this.userRepository.verifyLogin(login)) {
+      return 'Login já cadastrado';
+    }
+
     const user = this.userRepository.update(
       id,
       name,
       email,
       password,
-      telephone
+      telephone,
+      login
     );
 
     return user;
   }
 
-  /*
   public delete(id: string): boolean {
-    const deleted = this.userRepository.delete(id);
+    const userIndex = this.userRepository.findIndexById(id);
 
-    if (!deleted) {
+    if (userIndex === -1) {
       return false;
     }
 
+    this.userRepository.delete(id);
+
     return true;
   }
-    */
 }
 
 export default new UserService();
