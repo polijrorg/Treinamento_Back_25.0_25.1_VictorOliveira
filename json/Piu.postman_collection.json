@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "5f1672b0-73d4-4684-bf8d-848534c8ad42",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32667867"
+	},
+	"item": [
+		{
+			"name": "deletePiu",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/piu/d44e4774-325c-4915-ab28-4d22ff5ee3a5",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"piu",
+						"d44e4774-325c-4915-ab28-4d22ff5ee3a5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPiu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/piu",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"piu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPiu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/piu",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"piu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"gsfhavhfASOfuaBAIbbkj213u124bob343i\",\r\n    \"email\":\"teste@teste\",\r\n    \"name\":\"teste\",\r\n    \"login\":\"CapitaoCaverna\",\r\n    \"cpf\":\"35478423651\",\r\n    \"telephone\": \"11925418654\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"hvdfaIYBDhobwfehb121244sdfk1213\",\r\n    \"name\":\"teste\",\r\n    \"login\":\"CapitaoCaaaaverna\",\r\n    \"cpf\": \"351354544842\",\r\n    \"telephone\": \"1196434885\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user/2a8c4357-f60b-48b6-be54-c129c521702e",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"2a8c4357-f60b-48b6-be54-c129c521702e"
+					],
+					"query": [
+						{
+							"key": "/d",
+							"value": "90bfcd81-ce9e-41d9-aea3-620b78259787",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/user",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/user/a50a88f7-25c6-45c1-940f-ff2dfff01a8d",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"user",
+						"a50a88f7-25c6-45c1-940f-ff2dfff01a8d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
